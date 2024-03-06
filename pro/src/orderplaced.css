@@ -1,0 +1,42 @@
+.myImage {
+    width: 60px;
+    height: 60px;
+    margin-left: 100px;
+    background-image: url("./tick.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+}
+.cardcss
+{
+    padding-top: 100px;
+    padding-left: 450px;
+
+}
+.cardsh{
+    width:18rem;
+    box-shadow: 10px 10px 5px 12px lightblue;
+
+}
+
+.bcss
+{
+    background-color:#45729e;
+    margin-top: 50px;
+    margin-left: 1000px;
+    padding: 12px 28px;
+    border-radius: 8px;
+}
+.btcss
+{
+    background-color: #45729e;
+    margin-top: 50px;
+    padding: 12px 28px;
+    margin-left: 20px;
+    border-radius: 8px;
+}
+.backg
+{
+    background-color: bisque;
+    padding-bottom: 395px;
+}

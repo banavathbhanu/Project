@@ -1,0 +1,66 @@
+.orn {
+    background-color: black;
+    color: whitesmoke;
+    border-radius: 4px;
+    font-style: italic;
+    font-family: 'Trebuchet MS';
+    margin-right: 10px;
+}
+
+.orn:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.orn:disabled {
+
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.tdlo {
+    background-color: rgb(4, 70, 70);
+    color: whitesmoke;
+    border-radius: 4px;
+    padding: 0.20rem 1rem;
+    border: 1px solid black;
+
+}
+
+.heading {
+    font-family: 'Trebuchet MS';
+    font-size: 40px;
+    font-style: oblique;
+    text-decoration: none;
+    color: darkslategray;
+    font-weight: 500;
+    pointer-events: none;
+}
+
+.categorycss {
+
+    font: inherit;
+    border: 1px solid black;
+    background: rgb(4, 70, 70);
+    color: white;
+    padding: 0.25rem 1rem;
+    cursor: pointer;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-top: 35px;
+    margin-left: 400px;
+    margin-right: 30px;
+}
+
+.container1 {
+
+    background-color: rgb(103, 158, 158);
+
+}
+
+.my-3 {
+    margin-left: 100px;
+}

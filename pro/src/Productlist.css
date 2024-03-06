@@ -1,0 +1,35 @@
+.pagination-button {
+    padding: 8px 16px;
+    background-color:#863366;
+    color:white;
+    align-items: center;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+  
+}
+  
+  #page
+  {
+  
+    margin-left: 500px;
+    margin-top: 15px;
+  
+  }
+  #log
+  {
+    margin-left: 900px;
+  }
+  
+  .pagination-button:disabled {
+  
+  
+  
+  
+    opacity: 0.5;
+  
+  
+  
+  
+    cursor: not-allowed;
+}
