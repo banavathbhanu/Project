@@ -46,33 +46,33 @@ public class AddcartController {
 	
 
 }
-	@GetMapping("/get/{id}")
+	@GetMapping("/{id}")
 	public List<Addcart> getCartById(@PathVariable int id){
 		List<Addcart> ad=repo.getitemsbyuid(id);
 		System.out.println(ad);
 		return ad;
 		
 	}
-	@GetMapping("/gettotal/{id}")
+	@GetMapping("/total/{id}")
 	public long getCartByIdtotal(@PathVariable int id){
 		long ad=service.gettotal(id);
 		System.out.println(ad);
 		return ad;
 		
 	}
-	@PutMapping("/updatepriceincart/{id}/{price}")
+	@PutMapping("/priceincart/{id}/{price}")
 	public String updatepriceincart(@PathVariable int id,@PathVariable int price)
 	{
 		return service.updatecartprice(id,price);
 	}
-	@GetMapping("/getprice/{id}")
+	@GetMapping("/price/{id}")
 	public int getCartByIdcount(@PathVariable int id){
 		int ad=service.getprice(id);
 		System.out.println(ad);
 		return ad;
 		
 	}
-	@GetMapping("/getitem/{pid}")
+	@GetMapping("/item/{pid}")
 	public int getproduct(@PathVariable int pid)
 	{
 	   int x=service.getproduct(pid);	
@@ -85,7 +85,7 @@ public class AddcartController {
          return "deleted";
 
     }
-	@DeleteMapping("/del/{uid}")
+	@DeleteMapping("/{uid}")
 	public String userorderafterdelete(@PathVariable int uid)
 	{
 		repo.deleteafterorder(uid);
