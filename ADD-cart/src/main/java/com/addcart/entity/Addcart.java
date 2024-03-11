@@ -17,7 +17,7 @@ public class Addcart {
     private int quantity;
     private long price;
     private int orprice;
-    public int getOrprice() {
+    public int getOrderprice() {
 		return orprice;
 	}
 	public void setOrprice(int orprice) {
