@@ -48,9 +48,9 @@ public class OrderController {
 	@GetMapping("/{id}")
 	public List<Order> listoforder(@PathVariable("id") int id)
 	{
-		List<Order> uo=orderservice.findById(id);
-		System.out.println(uo);
-		return uo;
+		List<Order> updateorder=orderservice.findById(id);
+		System.out.println(updateorder);
+		return updateorder;
 		
 	}
 
