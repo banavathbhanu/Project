@@ -32,7 +32,7 @@ const BookNow=()=>
         });
         console.log(response.data)
         setTotalprice(response.data);
-        const res=await axios.delete(`http://localhost:8790/addto/del/${uid}`)
+        const res=await axios.delete(`http://localhost:8790/addto/${uid}`)
         console.log(res.data)
         navigate(`/Orderplaced/${response.data}`)
     }
