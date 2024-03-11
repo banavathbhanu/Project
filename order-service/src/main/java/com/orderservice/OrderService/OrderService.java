@@ -23,33 +23,33 @@ public class OrderService {
 	@Autowired
 	private OrderRepository repo;
 
-	public long fun(int pid,int uid,int quantity,String username,String address,String contact) {
+	public long orderingfunction(int pid,int uid,int quantity,String username,String address,String contact) {
 		// TODO Auto-generated method stub
 		System.out.println("hiii");
 		
-	    String u="http://ADMIN-PRODUCTS/product/update/"+pid+"/"+quantity;
-	    int s=restTemplate.exchange(u, HttpMethod.PUT,null,int.class).getBody();
+	    String url="http://ADMIN-PRODUCTS/product/update/"+pid+"/"+quantity;
+	    int s=restTemplate.exchange(url, HttpMethod.PUT,null,int.class).getBody();
 	    if(s!=1)
 	    {
 	    	return s;
 	    }
-	    	String url="http://ADMIN-PRODUCTS/product/get/"+pid;
-			Item item=restTemplate.getForObject(url,Item.class);
-			Order o=new Order();
-			o.setPid(pid);
-			o.setUid(uid);
-			o.setUsername(username);
-			o.setAddress(address);
-			o.setContact(contact);
+	    	String url1="http://ADMIN-PRODUCTS/product/get/"+pid;
+			Item item=restTemplate.getForObject(url1,Item.class);
+			Order project=new Order();
+			project.setPid(pid);
+			project.setUid(uid);
+			project.setUsername(username);
+			project.setAddress(address);
+			project.setContact(contact);
 		    long price=item.getPrice();
-		    o.setQuantity(quantity);
-		    o.setImage(item.getImage());
-		    o.setPrice(quantity*price);
+		    project.setQuantity(quantity);
+		    project.setImage(item.getImage());
+		    project.setPrice(quantity*price);
 		   // o.setSize(size);
 //		    int updateavailability=item.getAvailability()-quantity;
 //		    item.setAvailability(updateavailability);
 		    System.out.println(quantity*price);
-		    repo.save(o);
+		    repo.save(project);
 		    //return o.getPrice();
 		    return -1;
 	    
@@ -64,8 +64,8 @@ public class OrderService {
 //		for(Order ord:l)
 //		{
 //			int d=ord.getPid();
-//			String url="http://ADMIN-PRODUCTS/product/get/"+d;
-//			Item item=restTemplate.getForObject(url,Item.class);
+//			String url1="http://ADMIN-PRODUCTS/product/get/"+d;
+//			Item item=restTemplate.getForObject(url1,Item.class);
 //			prod.add(item);
 //		}
 	
