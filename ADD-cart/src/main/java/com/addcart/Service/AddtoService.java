@@ -31,7 +31,7 @@ public class AddtoService {
 		Item item=restTemplate.getForObject(url,Item.class);
 		Addcart order=new Addcart();
 		order.setPid(pid);
-		oder.setUid(uid);
+		order.setUid(uid);
 		order.setImage(item.getImage());
 		order.setOrprice(item.getPrice());
 	    long price=item.getPrice();
