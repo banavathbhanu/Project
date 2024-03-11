@@ -36,7 +36,7 @@ const ProductsList=()=>
     const deleteProduct =  (productId) => {
         Service.deleteProduct(productId).then(async function (response) {
             getProduct();
-            const resu = await axios.get("http://localhost:8790/addto/getitem/" + productId);
+            const resu = await axios.get("http://localhost:8790/addto/item/" + productId);
             if(resu.data===1)
             {
                 const res=await axios.delete("http://localhost:8790/addto/"+productId);
