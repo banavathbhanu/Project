@@ -52,7 +52,6 @@ public class ProductController {
 			           @RequestParam("price") int price,
 			           @RequestParam("availability") int availability) throws IOException
 	{
-		System.out.println("hi");
 		    proService.saveProduct(image,itemname,homemakername,price,availability);
 		    return "yes";
 	}
@@ -72,13 +71,13 @@ public class ProductController {
 
 		
 	}
-	@GetMapping("/get/{id}")
+	@GetMapping("/{id}")
 	public Product getProductbyid(@PathVariable("id") int id) throws Productnotfoundexception
 	{
 		Product product=proService.findByid(id);
 		return product;
 	}
-	@GetMapping("/getavailability/{id}")
+	@GetMapping("/availability/{id}")
 	public int getavailability(@PathVariable("id") int id)
 	{
 		return proService.getavailability(id);
@@ -92,11 +91,11 @@ public class ProductController {
         
         return proService.updateProductId(id,image,itemname,homemakername,price,availability);
     }
-	@PutMapping("/update/{pid}/{qunatity}")
+	@PutMapping("/{pid}/{qunatity}")
 	public int updateAvailability(@PathVariable("pid") int pid,@PathVariable int qunatity) {
 		return proService.updateProductavail(pid,qunatity);
 	}
-	@PutMapping("/updatecheck/{pid}/{qunatity}")
+	@PutMapping("/check/{pid}/{qunatity}")
 	public int updatecheck(@PathVariable("pid") int pid,@PathVariable int qunatity) {
 		return proService.updatequantitycheck(pid,qunatity);
 	}
@@ -122,7 +121,7 @@ public class ProductController {
 		 return x;
 
 	    }
-	 @GetMapping("/getPrice/{id}")
+	 @GetMapping("/Price/{id}")
 	 public long getPrice(@PathVariable int id)
 	 {
 		 return proService.getPrice(id);
