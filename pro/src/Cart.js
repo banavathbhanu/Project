@@ -40,13 +40,13 @@ const Cart=()=>
          
      }
     // const getavailability= async(cart.pid)=>{
-    //     const result=await axios.get(`http://localhost:8083/product/getavailability/${cart.pid}`)
+    //     const result=await axios.get(`http://localhost:8083/product/availability/${cart.pid}`)
     //     console.log(result.data)
     //  }
 
     const getavailability = async(proid) => {
         console.log("enter")
-        const r=await axios.get(`http://localhost:8083/product/getavailability/${proid}`)
+        const r=await axios.get(`http://localhost:8083/product/availability/${proid}`)
         console.log(r.data)
         setAvailability(r.data)
 
