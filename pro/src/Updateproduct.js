@@ -32,14 +32,14 @@ async function Updation(e){
     }).catch((err)=>{
         console.log(err)
     })
-    const res=await axios.get("http://localhost:8790/addto/getitem/" + id);
+    const res=await axios.get("http://localhost:8790/addto/item/" + id);
     if(res.data===1)
     {
-        const p=await axios.get("http://localhost:8790/addto/getprice/" +id);
+        const p=await axios.get("http://localhost:8790/addto/price/" +id);
         if(p.data!=price)
         {
           console.log(p.data,"hii",price)
-           const f=await axios.put("http://localhost:8790/addto/updatepriceincart/" + id+"/"+price);
+           const f=await axios.put("http://localhost:8790/addto/" + id+"/"+price);
            console.log(f.data);
         }
     }
