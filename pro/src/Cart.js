@@ -20,12 +20,12 @@ const Cart=()=>
         
     },[])
     const getItems=async ()=>{
-        const response=await axios.get(`http://localhost:8790/addto/get/${uid}`)
+        const response=await axios.get(`http://localhost:8790/addto/${uid}`)
         console.log(response.data)
         setCart(response.data);
         setProid(cart.pid);
         console.log(proid)
-        const res=await axios.get(`http://localhost:8790/addto/gettotal/${uid}`)
+        const res=await axios.get(`http://localhost:8790/addto/total/${uid}`)
         //console.log(res.data)
         setTp(res.data)
         console.log(cart.length)
