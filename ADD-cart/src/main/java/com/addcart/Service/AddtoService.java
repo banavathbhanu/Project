@@ -28,7 +28,7 @@ public class AddtoService {
 	    	return s;
 	    }
 	    String url1="http://ADMIN-PRODUCTS/product/get/"+pid;
-		Item item=restTemplate.getForObject(url,Item.class);
+		Item item=restTemplate.getForObject(url1,Item.class);
 		Addcart order=new Addcart();
 		order.setPid(pid);
 		order.setUid(uid);
