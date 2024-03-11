@@ -34,7 +34,7 @@ public class AddcartController {
 	@PostMapping("/store/{pid}")
 	public long addto(@PathVariable("pid") int pid,@RequestParam("uid") int uid,@RequestParam("quantity") int quantity) {
 		System.out.println("enter");
-	    long x=service.fun(pid,uid,quantity);
+	    long x=service.updateandaddtocart(pid,uid,quantity);
 	    System.out.println("fun....");
 	    return x;
 	
