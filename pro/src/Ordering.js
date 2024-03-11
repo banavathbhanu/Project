@@ -73,7 +73,7 @@ const Ordering=()=>
             setQuantity("")
             //setSize("")
             if(res.data===-1){
-                const resu=await axios.get("http://localhost:8083/product/getPrice/"+id)
+                const resu=await axios.get("http://localhost:8083/product/Price/"+id)
                 console.log(resu.data)
                 console.log(quantity)
                 navigate("/Orderplaced/"+resu.data*quantity)
