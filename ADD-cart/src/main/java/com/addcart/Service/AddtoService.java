@@ -18,7 +18,7 @@ public class AddtoService {
 	@Autowired
 	private AddtoRepository repo;
 
-	public long fun(int pid,int uid,int quantity) {
+	public long updateandaddtocart(int pid,int uid,int quantity) {
 		// TODO Auto-generated method stub
 		
 		String url="http://ADMIN-PRODUCTS/product/updatecheck/"+pid+"/"+quantity;
