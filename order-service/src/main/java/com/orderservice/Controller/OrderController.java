@@ -37,7 +37,7 @@ public class OrderController {
 	OrderService orderservice;
 	
 		
-	@PostMapping(value="/pos/{id}",consumes="multipart/form-data")
+	@PostMapping(value="/position/{id}",consumes="multipart/form-data")
 	public long order(@PathVariable("id") int pid,@RequestParam("uid") int uid,@RequestParam("quantity") int quantity,@RequestParam("username") String username,@RequestParam("address") String address,@RequestParam("contact") String contact) {
 		System.out.println("hiiiii");
 	    long x=orderservice.fun(pid,uid,quantity,username,address,contact);
@@ -45,7 +45,7 @@ public class OrderController {
 
 	}
 	
-	@GetMapping("/userorders/{id}")
+	@GetMapping("/{id}")
 	public List<Order> listoforder(@PathVariable("id") int id)
 	{
 		List<Order> uo=orderservice.findById(id);
